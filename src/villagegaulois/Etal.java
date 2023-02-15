@@ -17,6 +17,8 @@ public class Etal {
 		return vendeur;
 	}
 
+		
+	
 	public void occuperEtal(Gaulois vendeur, String produit, int quantite) {
 		this.vendeur = vendeur;
 		this.produit = produit;
@@ -77,5 +79,6 @@ public class Etal {
 	public boolean contientProduit(String produit) {
 		return this.produit.equals(produit);
 	}
+	
 
 }

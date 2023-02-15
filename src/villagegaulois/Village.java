@@ -21,6 +21,29 @@ public class Village {
 	public void setChef(Chef chef) {
 		this.chef = chef;
 	}
+	private static class Marche{
+		private Etal[] etals;
+		
+		private Marche(int nbEtal){
+			etals=new Etal[nbEtal];
+		
+		}
+		private void utiliserEtal(int indiceEtal,Gaulois vendeur,String produit,int nbproduit) {
+			
+			etals[indiceEtal].occuperEtal(vendeur, produit, nbproduit);
+		}
+        private int trouverEtatLibre() {
+        	int indice=-1;
+        	for(indice=0;indice<etals.length;indice++) {
+        		if(!etals[indice].isEtalOccupe()) {
+        			indice=indice+1;
+        		}
+	
+        	}
+        	return indice;
+		}
+	}
+	
 
 	public void ajouterHabitant(Gaulois gaulois) {
 		if (nbVillageois < villageois.length) {
